@@ -7,7 +7,18 @@
 
 body {
     display: grid;
-    grid: 1fr 5fr / 1fr 6fr;
+    grid: 1fr 5fr / minmax(0, 1fr), 6fr;
+}
+
+img {
+    width: 10px;
+}
+
+h1 > img {
+    width: 50px;
+    position: relative;
+    top: 10px;
+    right: 10px;
 }
 
 .sidebar {
