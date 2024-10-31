@@ -8,7 +8,8 @@
 
 body {
     display: grid;
-    grid: 1fr 5fr / 1fr, 6fr;
+    grid: 1fr 5fr / 1fr 5fr;
+    height: 100vh;
 }
 
 img {
@@ -65,7 +66,7 @@ ul > li > img {
 
     display: grid;
     grid: 1fr 1fr / 2fr 1fr;
-    padding: 0px 50px;
+    padding: 0px 40px;
     padding-top: 10px;
     padding-bottom: 20px;
     box-shadow: 0px 5px 10px #bbf7d0;
@@ -74,22 +75,35 @@ ul > li > img {
 }
 
 .search-bar {
-    margin: 15px;
+    margin: 20px;
+    margin-left: 40px;
     border-radius: 100px;
     background-color: #dcfce7;
 }
 
 .search-bar > img {
     position: relative;
+    top: 10px;
     right: 30px;
 }
 
+
 .welcome {
-    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 60px 4fr;
+}
+
+.welcome > div > img {
+    width: 75px;
+    position: relative;
+    left: 10px;
+    bottom: 10px;
 }
 
 .greeting {
     font-weight: bold;
+    padding-top: 23px;
+    padding-left: 35px;
 }
 
 .greeting > p:first-child{
@@ -102,20 +116,28 @@ ul > li > img {
 
 .user-info {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    gap: 10px;
+    grid-template-columns: 40px 40px 130px;
+    justify-content: end;
+    align-content: center;
     align-items: center;
     font-weight: bold;
+    position: relative;
+    right: 20px;
 }
 
-.user-info > p {
+.user-info > div > img {
     position: relative;
-    left: 30px;
+    width: 30px;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    place-items: center;
+    justify-items: center;
+    align-items: end;
+    position: relative;
+    bottom: 10px;
 }
 
 button {
@@ -126,26 +148,21 @@ button {
     font-weight: bold;
 }
 
-.welcome {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-}
 
 .main-content {
     grid-row: 2;
     grid-column: 2;
 
     display: grid;
-    grid: 1fr 1fr / 3fr 3fr 2fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr;
     padding: 20px;
     background-color: #dcfce7;
     gap: 20px;
 }
 
 .projects {
-    grid-row: 1 / span 2;
-    grid-column: 1 / span 2;
-    
+    grid-column: 1;
 }
 
 .section-header {
@@ -216,15 +233,32 @@ button {
     border-bottom: 1px solid lightgray;
 }
 
+.trending {
+    padding-top: 30px;
+}
+
 .trending-grid {
     grid-column: 3;
     border-radius: 10px;
     padding: 15px 20px;
     background-color: white;
+    display: grid;
+    grid: repeat(4, 1fr) / 50px 1fr;
+    justify-content: end;
+    row-gap: 20px;
+    column-gap: 5px;
 }
 
 .trending-grid > div {
     font-size: 12px;
+
+    display: grid;
+    grid-template-rows: 1 fr 1fr;
+}
+
+.trending-grid > img {
+    width: 30px;
+    justify-self: end;
 }
 
 .trending-grid > div > p:last-child {
